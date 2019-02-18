@@ -1,0 +1,351 @@
+header {
+    position        : absolute;
+    top             : 0;
+    left            : 0;
+    right           : 0;
+    z-index         : 99;
+  } 
+.titlecontainer
+{
+    display: flex;
+}
+nav{
+    width: 100%;
+}
+.menubar
+{
+    text-align: center;
+    margin: 0em;
+    padding: 0em;
+    list-style: none;
+    margin: 0em auto
+}
+.menubar li
+{
+    display: inline-block;
+    width: 9em;
+    height: 2em;
+    background-color: black;
+    opacity: .8;
+    line-height: 2em;
+    text-align: center;
+    font-size: 1.4em;
+    margin-right: 0.07em;
+    position: relative;
+}
+.menubar li a
+{
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+.menubar li a:hover
+{
+    background-color: green;
+}
+.menubar li .dropdown li
+{
+    z-index: 108;
+    display: none;
+    opacity: 1;
+}
+.menubar li:hover .dropdown li
+{
+    display: block;
+}
+.dropdown
+{
+    margin: 0em;
+    padding: 0em;
+    list-style: none;
+    position: absolute;
+    text-shadow: 2px 2px black;
+}
+.dropdown li a
+{
+    font-size: 1.8rem;
+}
+.dropdown li
+{
+    line-height: 2em;
+    width: 6.5em;
+    height: 2em;
+}
+body
+{
+    padding-top: 3em;
+    line-height: 1.2;
+    font-family: 'Merriweather', serif;
+    background: url(../images/waterfall.jpg) no-repeat;
+    background-size: cover;   
+    background-attachment: fixed;
+}
+
+.maincontainer
+{
+    font-size:1.5em;
+    color: white;
+    background-color: black;
+    opacity: .8;
+    width     : 100%;
+    max-width : 40em;
+    margin    : 0 auto;
+    padding   : 1rem 3rem 2rem;
+    box-sizing: border-box;
+
+}
+header .titlecontainer{
+    text-align: center;
+}
+
+@media only screen and (max-width: 650px) {
+
+    body{
+        padding-top: 6rem;
+    }
+    header h1 {
+      margin-bottom: 1rem;
+    }
+  
+    header nav {
+      float: none;
+      width: 100%;
+    }
+  
+    header nav,
+    header nav .menubar li,
+    header .container 
+    {
+        float: none;
+      display: block;
+      width: 100%;
+    }
+  
+    header nav .menubar li {
+      margin-left: 0;
+    }
+  
+    header nav .menubar li:not(:last-of-type) {
+      margin-bottom : 0.5rem;
+    }
+    table{
+        font-size: 0.6em;
+    }
+
+    header nav .menubar li .dropdown li a{
+        width: 100%;
+        z-index: 110;
+    }
+    .dropdown li a{
+      width: 100%;
+      z-index: 109;
+    }
+
+    .maincontainer
+    {
+      padding   : 8rem 5rem 2rem;
+    }
+  }
+  
+  .footer {
+    position: absolute;
+    right: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: grey;
+    opacity: 0.8;
+    text-align: center;
+  }
+  footer .footer{
+      display: flex;
+  }
+  .titlec{
+      font-size: 1.8em;
+      text-align: center;
+  }
+  .maincontainer h1
+  {
+    text-align: center;
+  }
+  .maincontainer h2{
+      text-align: center;
+  }
+  header div {
+      text-align: center;
+  }
+  .video {
+    text-align:  center;
+  }
+.tableft{
+      padding-left: 1em;
+  }
+  .i2mage {
+    text-align: center;
+    width     : 100%;
+    max-width : 40em;
+    margin    : 0 auto; 
+    box-sizing: border-box;
+  }
+  h2{
+      font-size:  1.8em;
+  }
+  h1{
+      font-size: 2em;
+  }
+  .image{
+    text-align: center;
+    max-width: 10em;
+    height: auto;
+    width: auto\9; /* ie8 */
+  }
+  img {
+
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+  }
+  main table {
+      text-align:left;
+      width: 100%;
+      background-color: antiquewhite;
+      color: black;
+  }
+
+main form input,
+main form label,
+main form textarea {
+  flex     : 1;
+  color    :green;
+  padding  : 0.5em;
+  font-size: 1em;
+  border: 0.5em rgb(164, 33, 240);
+  border-radius: 0.5em;
+}
+main form input[type="submit"] {
+    background-color: #b0bd3c;
+    color           : rgb(206, 55, 55);
+    border: 0.5em rgb(164, 33, 240);
+    }
+
+header .titlecontainer nav .menubar
+{
+    text-align: center;
+}
+.maincontainer image {
+    text-align: center;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+div .tabs{
+    text-align: center;
+}
+div.tabs>a.tab-trigger {
+    display                : inline-block;
+    text-decoration        : none;
+    border                 :  0.1em solid rgb(148, 182, 54);
+    color                  : rgb(55,55,55);
+    background-color       : rgb(255,255,255);
+    padding                : 0.5em 1em 0.4em 1em;
+    border-top-left-radius : 0.2em;
+    border-top-right-radius: 0.2em;
+  }
+  
+  div.tabs>a.tab-trigger.active {
+    padding-bottom: 0.75em;
+    border-bottom : none;
+  }
+  
+  div.tabs>div {
+      text-align: left;
+    border       : 0.1em solid rgb(6, 189, 31);
+    background-color:rgb(255, 255, 255);
+    margin-top   : -1px;
+    padding      : 1em;
+    margin-bottom: 2em;
+    border-top-left-radius : 0.2em;
+    border-top-right-radius: 0.2em;
+    border-bottom-left-radius : 0.2em;
+    border-bottom-right-radius: 0.2em;
+    color: black;
+  }
+
+  div.tabs>div:not(.active) {
+    display: none;
+  }
+  .image3{
+    text-align: center;
+    max-width: 10em;
+    height: auto;
+    width: auto\9; /* ie8 */
+    float: left;
+    opacity: unset;
+    padding-right: 1em
+  }
+  main .forminput {
+    width        : 100%;
+    max-width    : 35rem;
+    margin       : 0 auto 2em auto;
+    padding      : 1em;
+    border       : 0.3em solid rgb(213, 224, 191);
+    border-radius: 0.5rem;
+    box-sizing   : border-box;
+    background-color: beige; 
+  }
+  
+  main .forminput>div:not(:last-of-type) {
+    margin-bottom: 1em;
+    display      : flex;
+  }
+
+  main .forminput input,
+  main .forminput label,
+  main .forminput textarea {
+    flex     : 1;
+    color    :green;
+    padding  : 0.5em;
+    font-size: 1em;
+  }
+  
+  main .forminput label {
+    padding-left: 0;
+  }
+  
+  main .forminput input,
+  main .forminput textarea {
+    border-radius: 0.25em;
+  }
+  
+  main .forminput textarea {
+    min-height: 6em;
+  }
+  
+  main .forminput input:not([type="submit"]),
+  main .forminput textarea {
+    border: 1px solid rgb(200,200,200);
+  }
+  
+  main .forminput input[type="submit"] {
+    background-color: #42a5f5;
+    color           : white;
+    border          : 1px solid #42a5f5;
+  }
+  
+  main .forminput p.error {
+    background-color: rgb(235, 97, 97);
+    color           : white;
+    padding         : 0.25em 0.75em;
+    margin-bottom   : 0.25em;
+  }
+
+.myinput input,
+.myinput label,
+.myinput textarea {
+  flex     : 1;
+  color    :green;
+  padding  : 0.5em;
+  font-size: 1em;
+  border: 0.1em;
+  border-radius: 0.2em;
+}
