@@ -2,7 +2,7 @@
 
   // Include the Rapid library
   require_once('lib/Rapid.php');
-
+  define('BASE_URL','/wp_CA3_Smith_Tomas');
   // Create a new Router instance
   $app = new \Rapid\Router();
 
