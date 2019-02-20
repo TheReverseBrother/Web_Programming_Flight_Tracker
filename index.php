@@ -12,6 +12,8 @@
   $app->GET('/home',        'Home');
   $app->GET('/passengers',        'Passengers');
   $app->GET('/flights',        'Flights');
+  $app->GET('/insertflight',        'InsertFlight');
+  $app->GET('/insertpassenger',        'InsertPassenger');
   // $app->GET('/example', 'Example');
 
   // Process the request

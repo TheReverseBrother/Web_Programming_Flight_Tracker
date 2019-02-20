@@ -41,6 +41,7 @@ nav{
 }
 .menubar li a:hover
 {
+    color: black;
     background-color: lightyellow;
 }
 body
@@ -69,56 +70,6 @@ body
 header .titlecontainer{
     text-align: center;
 }
-
-@media only screen and (max-width: 650px) {
-
-    body{
-        padding-top: 6rem;
-    }
-    header h1 {
-      margin-bottom: 1rem;
-    }
-  
-    header nav {
-      float: none;
-      width: 100%;
-    }
-  
-    header nav,
-    header nav .menubar li,
-    header .container 
-    {
-        float: none;
-      display: block;
-      width: 100%;
-    }
-  
-    header nav .menubar li {
-      margin-left: 0;
-    }
-  
-    header nav .menubar li:not(:last-of-type) {
-      margin-bottom : 0.5rem;
-    }
-    table{
-        font-size: 0.6em;
-    }
-
-    header nav .menubar li .dropdown li a{
-        width: 100%;
-        z-index: 110;
-    }
-    .dropdown li a{
-      width: 100%;
-      z-index: 109;
-    }
-
-    .maincontainer
-    {
-      padding   : 8rem 5rem 2rem;
-    }
-  }
-  
   .footer {
     position: absolute;
     right: 0;
