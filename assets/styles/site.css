@@ -32,12 +32,15 @@ nav{
     font-size: 1.4em;
     margin-right: 0.07em;
     position: relative;
+    border-radius: 0.5em;
+    border: 0.2em solid black
 }
 .menubar li a
 {
     text-decoration: none;
     color: white;
     display: block;
+    border-radius: 0.5em;
 }
 .menubar li a:hover
 {
@@ -57,7 +60,7 @@ body
 .maincontainer
 {
     font-size:1.5em;
-    color: green;
+    color: Black;
     background-color: lightskyblue;
     opacity: .8;
     width     : 100%;
@@ -65,7 +68,8 @@ body
     margin    : 0 auto;
     padding   : 1rem 3rem 2rem;
     box-sizing: border-box;
-
+    border-radius: 0.8em;
+    border: 0.5em solid black  ;
 }
 header .titlecontainer{
     text-align: center;

@@ -1,8 +1,8 @@
 <?php
-
+    $config = require_once('config.php');
   // Include the Rapid library
   require_once('lib/Rapid.php');
-  define('BASE_URL','/wp_CA3_Smith_Tomas');
+  define('BASE_URL',$config['base_url']);
   // Create a new Router instance
   $app = new \Rapid\Router();
 
@@ -18,5 +18,4 @@
 
   // Process the request
   $app->dispatch();
-
 ?>
