@@ -3,7 +3,7 @@ class Passenger
 {
     public function PassengerArray($db)
     {
-        $query = "SELECT PlaneID, Name FROM passengers";
+        $query = "SELECT FlightID, Name FROM passengers";
         $statement = $db->prepare($query);
         $statement->execute();
 
@@ -11,12 +11,12 @@ class Passenger
 
         return $result;
     }
-    public function AddPassenger( $db ,$FlightID, $Cname)
+    public function AddPassenger( $db ,$FlightID, $Passengername)
     {
-        $query = "INSERT INTO flights (flightID, Company) VALUES(:flightID, :Company)";
+        $query = "INSERT INTO passengers (flightID, name) VALUES(:flightID, :name)";
         $statement = $db->prepare($query);
         $statement->bindParam(":flightID",$FlightID, PDO::PARAM_STR);
-        $statement->bindParam(":Company",$Cname, PDO::PARAM_STR);
+        $statement->bindParam(":name",$Passengername, PDO::PARAM_STR);
         $statement->execute();
     }
 

@@ -18,7 +18,7 @@
         $app->GET('/insertflight', 'InsertFlight');
         $app->POST('/insertflightprocess', 'InsertFlightProcess');
         $app->POST('/insertPassenger', 'InsertPassengerProcess');
-        $app->GET('/insertpassenger', 'InsertPassenger');
+        $app->GET('/insertpassengers', 'InsertPassenger');
         // $app->GET('/example', 'Example');
 
         // Process the request

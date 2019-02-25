@@ -6,7 +6,7 @@ class Flight
 {
     public function FlightArray($db)
     {
-        $query = "SELECT PlaneID, FlightID, Company FROM flights";
+        $query = "SELECT FlightID,Company FROM flights";
         $statement = $db->prepare($query);
         $statement->execute();
 

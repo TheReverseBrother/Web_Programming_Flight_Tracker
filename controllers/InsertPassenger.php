@@ -1,7 +1,11 @@
 <?php return function($req, $res) {
 
-    $res->render('main', 'insertPassenger', [
-        'Title' => 'Add Passenger'
-    ]);
+    require_once ('models/PassengerModel.php');
+    $GetTable = new Passenger();
+
+    $db = require_once ('lib/database.php');
+    $table = $GetTable->PassengerArray($db);
+
+    $res->render('main', 'insertPassenger', $table);
 
 } ?>

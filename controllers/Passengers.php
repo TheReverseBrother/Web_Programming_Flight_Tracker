@@ -6,6 +6,6 @@
     $db = require_once ('lib/database.php');
     $table = $GetTable->PassengerArray($db);
 
-$res->render('main', 'passengers', $table);
+    $res->render('main', 'passengers', $table);
 
 } ?>

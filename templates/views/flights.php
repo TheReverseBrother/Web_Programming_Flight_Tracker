@@ -10,5 +10,5 @@
 </table>
 
 <form action='<?=BASE_URL?>/insertflight'>
-    <input type ='submit' value ='Add FLight'>
+    <input type ='submit' value ='Add Flight'>
 </form

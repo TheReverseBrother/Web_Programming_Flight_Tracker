@@ -1,9 +1,15 @@
 <?php return function($req, $res) {
 
-    $db = require('lib/database.php');
+    require('models/PassengerModel.php');
+    $db = require_once ('lib/database.php');
+    $passengerTable = new Passenger();
 
-    $flightName = $req->body('student_name');
-    $db-> prepare('');
-    $res->redirect("/InsertPassenger");
+    $flightID = $req->body('flightID');
+    $Name = $req->body('passengerName');
+
+    $passengerTable->AddPassenger($db,$flightID,$Name);
+
+
+    $res->redirect("/flights");
 
 } ?>
