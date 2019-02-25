@@ -1,7 +1,7 @@
 <?php return function($req, $res) {
 
     require('models/PassengerModel.php');
-    $db = require_once ('lib/database.php');
+    $db = require('lib/database.php');
     $passengerTable = new Passenger();
 
     $flightID = $req->body('flightID');
@@ -10,6 +10,6 @@
     $passengerTable->AddPassenger($db,$flightID,$Name);
 
 
-    $res->redirect("/flights");
+    $res->redirect("/passengers");
 
 } ?>

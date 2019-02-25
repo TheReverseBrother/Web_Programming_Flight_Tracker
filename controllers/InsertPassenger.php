@@ -4,7 +4,7 @@
     $GetTable = new Passenger();
 
     $db = require_once ('lib/database.php');
-    $table = $GetTable->PassengerArray($db);
+    $table = $GetTable->getFlightIDS($db);
 
     $res->render('main', 'insertPassenger', $table);
 

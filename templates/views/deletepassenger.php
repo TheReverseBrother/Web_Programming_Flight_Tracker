@@ -1,12 +1,7 @@
-<h1 class = 'title'>Insert Passenger</h1>
-<br>
-<div class='img'>
-    <a data-fancybox='gallery' href='./images/Anationalpark.jpg'><img src='./images/Anationalpark.jpg' alt=''></a>
-</div>
-<br>
+<h1 class = 'title'>Delete Passenger</h1>
 <br>
 
-<form class='forminput' action="<?=BASE_URL?>/insertpassengerprocess" method="post">
+<form class='forminput' action="<?=BASE_URL?>/deletepassengerprocess" method="post">
     <label for="flightID">Flight ID       :</label>
     <select name="flightID" id="flightID">
         <?php foreach ($locals as $row) {

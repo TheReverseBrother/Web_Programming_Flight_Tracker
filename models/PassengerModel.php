@@ -20,14 +20,9 @@ class Passenger
         $statement->execute();
     }
 
-    public function UpdateFlight( $db ,$PlaneID,$FlightID, $Cname)
+    public function getFlightIDS($db)
     {
-
-    }
-
-    public function FindFlight( $db ,$FlightID, $Cname)
-    {
-        $query = "SELECT PlaneID, FlightID, Company FROM flights";
+        $query = "SELECT FlightID FROM flights";
         $statement = $db->prepare($query);
         $statement->execute();
 
@@ -36,11 +31,25 @@ class Passenger
         return $result;
     }
 
-    public function DeleteFlight($PlaneID)
+    public function UpdatePassenger( $db ,$passengerID,$Name,$flightID)
     {
-        $query = "DELETE FROM flights WHERE planeID = :planeID)";
+        $query = "UPDATE passengers
+                    SET  flightID     = :flightID,
+                         name         = :name
+                  WHERE passengerID = :passengerID'";
+
         $statement = $db->prepare($query);
-        $statement->bindParam(":planeID",$PlaneID, PDO::PARAM_INT);
+        $statement->bindParam(":passengerID", $passengerID, PDO::PARAM_INT);
+        $statement->bindParam(":flightID", $flightID, PDO::PARAM_STR);
+        $statement->bindParam(":name", $Name, PDO::PARAM_STR);
+        $statement->execute();
+    }
+
+    public function DeletePassenger($db,$passengerID)
+    {
+        $query = "DELETE FROM passengers WHERE passengerID = :passengerID)";
+        $statement = $db->prepare($query);
+        $statement->bindParam(":passengerID",$passengerID, PDO::PARAM_INT);
         $statement->execute();
     }
 }

@@ -15,10 +15,22 @@
         $app->GET('/home', 'Home');
         $app->GET('/passengers', 'Passengers');
         $app->GET('/flights', 'Flights');
+
+        //Insert Delete Update Controllers
         $app->GET('/insertflight', 'InsertFlight');
-        $app->POST('/insertflightprocess', 'InsertFlightProcess');
-        $app->POST('/insertPassenger', 'InsertPassengerProcess');
         $app->GET('/insertpassengers', 'InsertPassenger');
+        $app->GET('/deletepassengers', 'DeletePassenger');
+        $app->GET('/deleteflight', 'DeleteFlight');
+
+        //Insert Delete Update Processes
+        $app->POST('/insertflightprocess', 'InsertFlightProcess');
+        $app->POST('/insertpassengerprocess', 'InsertPassengerProcess');
+        $app->POST('/deleteflightprocess', 'DeleteFlightProcess');
+        $app->POST('/deletepassengerprocess', 'DeletePassengerProcess');
+
+
+
+
         // $app->GET('/example', 'Example');
 
         // Process the request
@@ -27,8 +39,8 @@
     catch(\Rapid\RouteNotFoundException $e)
     {
         $res = $e->getRequestObject();
-//        $res->status(404);
-//        $res->render('main', '404', []);
+        $res->status(404);
+        $res->render('main', '404', []);
     }
     catch(PDOException $e){
 
