@@ -1,7 +1,8 @@
 <?php return function($req, $res) {
+    require_once ('models/FlightModel.php');
+    $GetTable = new Flight();
 
-$res->render('main', 'flights', [
-    'Title' => 'Flights'
-]);
-
+    $db = require_once ('lib/database.php');
+    $table = $GetTable->FlightArray($db);
+    $res->render('main', 'flights', $table);
 } ?>

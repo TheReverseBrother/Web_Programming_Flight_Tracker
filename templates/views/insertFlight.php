@@ -6,14 +6,10 @@
 <br>
 <br>
 
-<form class='forminput' action="./insertanimaltransaction.php" method="post">
-            <label for="parkID">Park ID       :</label>
-            <input type="int" id = "parkID" name = "parkID" required autofocus><br>
-            <label for="animalName">Animal Name: </label>
-            <input type="text" id = "animalName" name = "animalName" required autofocus><br>
-            <label for="species">Species: </label>
-            <input type="text" id = "species" name = "species" required autofocus><br>
-            <label for="population">Population    :</label>
-            <input type="int" id = "population" name = "population" required><br>
-            <input type="submit" value="Add Animal">
-            </form>
+<form class='forminput' action="<?=BASE_URL?>/insertflightprocess" method="post">
+    <label for="flightID">FlightID       :</label>
+    <input type="text" id = "flightID" name = "flightID" required autofocus><br>
+    <label for="companylName">Company Name: </label>
+    <input type="text" id = "companyName" name = "companyName" required autofocus><br>
+    <input type="submit" value="Add Flight">
+</form>

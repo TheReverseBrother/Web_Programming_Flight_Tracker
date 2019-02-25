@@ -4,6 +4,7 @@
         $config = require_once('config.php');
         // Include the Rapid library
         require_once('lib/Rapid.php');
+
         define('BASE_URL', $config['base_url']);
         // Create a new Router instance
         $app = new \Rapid\Router();
@@ -15,6 +16,8 @@
         $app->GET('/passengers', 'Passengers');
         $app->GET('/flights', 'Flights');
         $app->GET('/insertflight', 'InsertFlight');
+        $app->POST('/insertflightprocess', 'InsertFlightProcess');
+        $app->POST('/insertPassenger', 'InsertPassengerProcess');
         $app->GET('/insertpassenger', 'InsertPassenger');
         // $app->GET('/example', 'Example');
 
@@ -24,8 +27,8 @@
     catch(\Rapid\RouteNotFoundException $e)
     {
         $res = $e->getRequestObject();
-        $res->status(404);
-        $res->render('main', '404', []);
+//        $res->status(404);
+//        $res->render('main', '404', []);
     }
     catch(PDOException $e){
 
