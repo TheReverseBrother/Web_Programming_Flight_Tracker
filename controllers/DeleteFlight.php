@@ -1,5 +1,9 @@
 <?php return function($req, $res) {
 
-    $res->render('main', 'deleteflight', []);
+    $db = require_once ('lib/database.php');
+    require_once ('models/FlightModel.php');
+    $Getflight = new Flight();
+    $flightIDList = $Getflight->getFlightIDs($db);
+    $res->render('main', 'deleteflight', $flightIDList);
 
 } ?>

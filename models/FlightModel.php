@@ -39,6 +39,15 @@ class Flight
 
     }
 
+    public function DeleteChildObjects($db,$flightID)
+    {
+        $query = "DELETE FROM passengers WHERE FlightID = :FlightID";
+        $statement = $db->prepare($query);
+        $statement->bindParam(":FlightID",$flightID, PDO::PARAM_STR);
+        $statement->execute();
+        $statement->closeCursor();
+    }
+
     public function FindFlight( $db ,$FlightID, $Cname)
     {
         $query = "SELECT PlaneID, FlightID, Company FROM flights";
@@ -50,12 +59,13 @@ class Flight
         return $result;
     }
 
-    public function DeleteFlight($flightID)
+    public function DeleteFlight($db,$flightID)
     {
-        $query = "DELETE FROM flights WHERE flightID = :flightID)";
+        $query = "DELETE FROM flights WHERE flightID = :flightID";
         $statement = $db->prepare($query);
         $statement->bindParam(":flightID",$flightID, PDO::PARAM_STR);
         $statement->execute();
+        $statement->closeCursor();
     }
 }
 ?>

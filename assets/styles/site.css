@@ -276,3 +276,8 @@ div.tabs>a.tab-trigger {
   border: 0.1em;
   border-radius: 0.2em;
 }
+select
+{
+    font-size: 1rem;
+    font-family: 'Merriweather', serif;
+}

@@ -3,7 +3,7 @@ class Passenger
 {
     public function PassengerArray($db)
     {
-        $query = "SELECT FlightID, Name FROM passengers";
+        $query = "SELECT * FROM passengers";
         $statement = $db->prepare($query);
         $statement->execute();
 
@@ -31,26 +31,31 @@ class Passenger
         return $result;
     }
 
-    public function UpdatePassenger( $db ,$passengerID,$Name,$flightID)
+    public function UpdatePassenger( $db ,$PassengerID,$Name,$flightID)
     {
         $query = "UPDATE passengers
                     SET  flightID     = :flightID,
                          name         = :name
-                  WHERE passengerID = :passengerID'";
+                  WHERE PassengerID = :PassengerID'";
 
         $statement = $db->prepare($query);
-        $statement->bindParam(":passengerID", $passengerID, PDO::PARAM_INT);
+        $statement->bindParam(":PassengerID", $PassengerID, PDO::PARAM_INT);
         $statement->bindParam(":flightID", $flightID, PDO::PARAM_STR);
         $statement->bindParam(":name", $Name, PDO::PARAM_STR);
         $statement->execute();
     }
 
+    /**
+     * @var $db PDO
+     * @param $passengerID
+     */
     public function DeletePassenger($db,$passengerID)
     {
-        $query = "DELETE FROM passengers WHERE passengerID = :passengerID)";
+        $query = "DELETE FROM passengers WHERE PassengerID = :PassengerID";
         $statement = $db->prepare($query);
-        $statement->bindParam(":passengerID",$passengerID, PDO::PARAM_INT);
+        $statement->bindParam(":PassengerID",$passengerID, PDO::PARAM_INT);
         $statement->execute();
+        $statement->closeCursor();
     }
 }
 ?>

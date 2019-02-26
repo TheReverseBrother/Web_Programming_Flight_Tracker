@@ -12,3 +12,7 @@
 <form action='<?=BASE_URL?>/insertpassengers'>
     <input type ='submit' value ='Add Passenger'>
 </form>
+
+<form id="dooby" action='<?=BASE_URL?>/deletepassengers' >
+    <input type ='submit' value ='Delete Passenger'>
+</form>

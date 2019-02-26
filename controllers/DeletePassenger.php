@@ -1,5 +1,11 @@
 <?php return function($req, $res) {
 
-    $res->render('main', 'deletepassenger', []);
+    require_once ('models/PassengerModel.php');
+    $GetTable = new Passenger();
+
+    $db = require_once ('lib/database.php');
+    $table = $GetTable->PassengerArray($db);
+
+    $res->render('main', 'deletepassenger', $table);
 
 } ?>

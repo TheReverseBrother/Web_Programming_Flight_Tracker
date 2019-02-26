@@ -9,5 +9,5 @@
             echo '<option value="'. $id .'">'. $id .'</option>';
         }?>
     </select><br>
-    <input type="submit" value="Delete Passenger">
+    <input type="submit" value="Delete Flight">
 </form>

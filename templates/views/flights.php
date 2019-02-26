@@ -11,4 +11,8 @@
 
 <form action='<?=BASE_URL?>/insertflight'>
     <input type ='submit' value ='Add Flight'>
-</form
+</form>
+
+<form action='<?=BASE_URL?>/deleteflight'>
+    <input type ='submit' value ='Delete Flight'>
+</form>

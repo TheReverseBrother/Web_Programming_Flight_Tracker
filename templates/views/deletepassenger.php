@@ -2,14 +2,14 @@
 <br>
 
 <form class='forminput' action="<?=BASE_URL?>/deletepassengerprocess" method="post">
-    <label for="flightID">Flight ID       :</label>
-    <select name="flightID" id="flightID">
+    <label for="passengerID">Passenger       :</label>
+    <select name="passengerID" id="passengerID">
         <?php foreach ($locals as $row) {
-            $id = $row->FlightID;
-            echo '<option value="'. $id .'">'. $id .'</option>';
+            $id = $row->PassengerID;
+            $flightID= $row->FlightID;
+            $pName = $row->Name;
+            echo '<option value="'. $id .'">'. $flightID . " - " . $pName . '</option>';
         }?>
     </select><br>
-    <label for="passengerName">Passenger Name : </label>
-    <input type="text" id = "passengerName" name = "passengerName"><br>
-    <input type="submit" value="Add Passenger">
+    <input type="submit" value="Delete Passenger">
 </form>
