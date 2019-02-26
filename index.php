@@ -21,16 +21,17 @@
         $app->GET('/insertpassengers', 'InsertPassenger');
         $app->GET('/deletepassengers', 'DeletePassenger');
         $app->GET('/deleteflight', 'DeleteFlight');
+        $app->GET('/updateflight', 'UpdateFlight');
+        $app->GET('/updatepassenger', 'UpdatePassenger');
 
-        //Insert Delete Update Processes
+        //Insert Delete Update Processers
         $app->POST('/insertflightprocess', 'InsertFlightProcess');
         $app->POST('/insertpassengerprocess', 'InsertPassengerProcess');
         $app->POST('/deleteflightprocess', 'DeleteFlightProcess');
         $app->POST('/deletepassengerprocess', 'DeletePassengerProcess');
-
-
-
-
+        $app->POST('/updatepassengerprocess', 'UpdatePassengerProcess');
+        $app->POST('/updateflightprocess', 'UpdateFlightProcess');
+        
         // $app->GET('/example', 'Example');
 
         // Process the request

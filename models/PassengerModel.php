@@ -34,9 +34,9 @@ class Passenger
     public function UpdatePassenger( $db ,$PassengerID,$Name,$flightID)
     {
         $query = "UPDATE passengers
-                    SET  flightID     = :flightID,
-                         name         = :name
-                  WHERE PassengerID = :PassengerID'";
+                    SET  FlightID     = :flightID,
+                         Name         = :name
+                  WHERE PassengerID = :PassengerID";
 
         $statement = $db->prepare($query);
         $statement->bindParam(":PassengerID", $PassengerID, PDO::PARAM_INT);

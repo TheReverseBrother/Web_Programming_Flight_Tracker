@@ -36,7 +36,14 @@ class Flight
 
     public function UpdateFlight( $db ,$PlaneID,$FlightID, $Cname)
     {
+        $query = "UPDATE flights
+                    SET Company         = :company
+                  WHERE FlightID = :FlightID";
 
+        $statement = $db->prepare($query);
+        $statement->bindParam(":FlightID", $FlightID, PDO::PARAM_STR);
+        $statement->bindParam(":company", $Cname, PDO::PARAM_STR);
+        $statement->execute();
     }
 
     public function DeleteChildObjects($db,$flightID)
