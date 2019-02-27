@@ -1,10 +1,8 @@
 <h1 class = 'title'>Insert Flight</h1>
 <br>
-<div class='img'>
-    <a data-fancybox='gallery' href='./images/Anationalpark.jpg'><img src='./images/Anationalpark.jpg' alt=''></a>
-</div>
-<br>
-<br>
+<?php if($locals['fail'] == 2){?>
+    <p id="error">Please Enter Flight ID As 2 letters followed by 4 Numbers</p>
+<?php }?>
 
 <form class='forminput' action="<?=BASE_URL?>/insertflightprocess" method="post">
     <label for="flightID">FlightID       :</label>

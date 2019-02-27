@@ -8,13 +8,18 @@
 
     $flightID = $req->body('flightID');
     $Cname = $req->body('companyName');
+
     $flightID = $validate->validateSTRING($flightID);
+    $checked = $validate->checkRegex($flightID);
     $Cname = $validate->validateSTRING($Cname);
+    if($checked == null)
+    {
+        $res->redirect('/insertflight?fail=2');
+    }
     if($flightID != null & $Cname != null)
     {
         $flightModel->AddFlight($db, $flightID, $Cname);
         $res->redirect('/flights');
     }
-    $res->redirect('/flights?fail=1');
 }
 ?>

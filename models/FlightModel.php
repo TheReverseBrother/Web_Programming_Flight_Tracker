@@ -75,11 +75,5 @@ class Flight
         $statement->closeCursor();
     }
 
-    public function checkFlightREGEX($check)
-    {
-        $pattern = '/[a-zA-Z]{2}[0-9]{4}/';
-
-        return preg_match($pattern,$check);
-    }
 }
 ?>

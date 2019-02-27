@@ -30,9 +30,10 @@ class FormUtils
         }
     }
 
-    public static function validateFlight($flightVAL)
+    public function checkRegex($check)
     {
-
+        $checked = preg_match('/[a-Z]{2}[0-9]{4}/',$check);
+        return $checked;
     }
 }
 ?>
