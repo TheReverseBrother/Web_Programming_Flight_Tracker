@@ -10,7 +10,7 @@ class Flight
         $statement = $db->prepare($query);
         $statement->execute();
 
-        $result = $statement->fetchAll(PDO::FETCH_OBJ);
+        $result = $statement->fetchAll();
 
         return $result;
     }
@@ -29,12 +29,12 @@ class Flight
         $statement = $db->prepare($query);
         $statement->execute();
 
-        $result = $statement->fetchAll(PDO::FETCH_OBJ);
+        $result = $statement->fetchAll();
 
         return $result;
     }
 
-    public function UpdateFlight( $db ,$PlaneID,$FlightID, $Cname)
+    public function UpdateFlight( $db ,$FlightID, $Cname)
     {
         $query = "UPDATE flights
                     SET Company         = :company
@@ -61,7 +61,7 @@ class Flight
         $statement = $db->prepare($query);
         $statement->execute();
 
-        $result = $statement->fetchAll(PDO::FETCH_OBJ);
+        $result = $statement->fetchAll();
 
         return $result;
     }
@@ -73,6 +73,13 @@ class Flight
         $statement->bindParam(":flightID",$flightID, PDO::PARAM_STR);
         $statement->execute();
         $statement->closeCursor();
+    }
+
+    public function checkFlightREGEX($check)
+    {
+        $pattern = '/[a-zA-Z]{2}[0-9]{4}/';
+
+        return preg_match($pattern,$check);
     }
 }
 ?>

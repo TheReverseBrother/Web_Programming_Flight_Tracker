@@ -7,7 +7,7 @@ class Passenger
         $statement = $db->prepare($query);
         $statement->execute();
 
-        $result = $statement->fetchAll(PDO::FETCH_OBJ);
+        $result = $statement->fetchAll();
 
         return $result;
     }
@@ -26,7 +26,7 @@ class Passenger
         $statement = $db->prepare($query);
         $statement->execute();
 
-        $result = $statement->fetchAll(PDO::FETCH_OBJ);
+        $result = $statement->fetchAll();
 
         return $result;
     }

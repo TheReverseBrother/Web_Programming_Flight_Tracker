@@ -8,8 +8,8 @@
 
 <form class='forminput' action="<?=BASE_URL?>/updateflightprocess" method="post">
     <select name="flightID" id="flightID">
-        <?php foreach ($locals as $row) {
-            $id = $row->FlightID;
+        <?php foreach ($locals['table'] as $row) {
+            $id = $row['FlightID'];
             echo '<option value="'. $id .'">'. $id .'</option>';
         }?><br>
     <label for="companyName">Company Name: </label>

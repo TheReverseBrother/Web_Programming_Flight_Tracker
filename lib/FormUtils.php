@@ -7,12 +7,11 @@ class FormUtils
         {
             $val = filter_var($strVAL, FILTER_SANITIZE_STRING);
             $val = trim($val);
-
             return $val;
         }
         else
         {
-            return NULL;
+            return null;
         }
     }
 
@@ -29,6 +28,11 @@ class FormUtils
         {
             return NULL;
         }
+    }
+
+    public static function validateFlight($flightVAL)
+    {
+
     }
 }
 ?>

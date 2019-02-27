@@ -5,6 +5,6 @@
 
     $db = require_once ('lib/database.php');
     $table = $GetTable->PassengerArray($db);
-    $res->render('main', 'updatepassenger', $table);
+    $res->render('main', 'updatepassenger', ['Title' => 'Update Passenger','table' =>$table]);
 
 } ?>

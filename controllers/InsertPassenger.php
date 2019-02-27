@@ -6,6 +6,6 @@
     $db = require_once ('lib/database.php');
     $table = $GetTable->getFlightIDS($db);
 
-    $res->render('main', 'insertPassenger', $table);
+    $res->render('main', 'insertPassenger', ['Title' => 'Insert Passenger','table' => $table]);
 
 } ?>

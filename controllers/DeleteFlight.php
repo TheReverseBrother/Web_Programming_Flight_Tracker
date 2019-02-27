@@ -4,6 +4,7 @@
     require_once ('models/FlightModel.php');
     $Getflight = new Flight();
     $flightIDList = $Getflight->getFlightIDs($db);
-    $res->render('main', 'deleteflight', $flightIDList);
+
+    $res->render('main', 'deleteflight', ['Title' => 'Delete Flight','table'=> $flightIDList]);
 
 } ?>

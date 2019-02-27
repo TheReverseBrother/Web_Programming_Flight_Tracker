@@ -9,8 +9,8 @@
 <form class='forminput' action="<?=BASE_URL?>/insertpassengerprocess" method="post">
     <label for="flightID">Flight ID       :</label>
     <select name="flightID" id="flightID">
-        <?php foreach ($locals as $row) {
-            $id = $row->FlightID;
+        <?php foreach ($locals['table'] as $row) {
+            $id = $row['FlightID'];
             echo '<option value="'. $id .'">'. $id .'</option>';
         }?>
     </select><br>

@@ -1,26 +1,20 @@
 <h1 class = 'title'>Update Passenger</h1>
-<br>
-<div class='img'>
-    <a data-fancybox='gallery' href='./images/Anationalpark.jpg'><img src='./images/Anationalpark.jpg' alt=''></a>
-</div>
-<br>
-<br>
 
-<form class='forminput' action="<?=BASE_URL?>/insertflightprocess" method="post">
-    <form class='forminput' action="<?=BASE_URL?>/deletepassengerprocess" method="post">
+
+    <form class='forminput' action="<?=BASE_URL?>/updatepassengerprocess" method="post">
         <label for="passengerID">Passenger       :</label>
         <select name="passengerID" id="passengerID">
-            <?php foreach ($locals as $row) {
-                $id = $row->PassengerID;
-                $flightID= $row->FlightID;
-                $pName = $row->Name;
+            <?php foreach ($locals['table'] as $row) {
+                $id = $row['PassengerID'];
+                $flightID= $row['FlightID'];
+                $pName = $row['Name'];
                 echo '<option value="'. $id .'">'. $flightID . " - " . $pName . '</option>';
             }?>
         </select><br>
-        <label for="passengerID">Flight       :</label>
+        <label for="flightID">Flight       :</label>
         <select name="flightID" id="flightID">
-            <?php foreach ($locals as $row) {
-                $flightID= $row->FlightID;
+            <?php foreach ($locals['table'] as $row) {
+                $flightID= $row['FlightID'];
                 echo '<option value="'. $flightID .'">'. $flightID . '</option>';
             }?>
         </select><br>

@@ -6,6 +6,6 @@
     $db = require_once ('lib/database.php');
     $table = $GetTable->PassengerArray($db);
 
-    $res->render('main', 'deletepassenger', $table);
+    $res->render('main', 'deletepassenger', [ 'Title' => 'Delete Passenger','table' =>$table]);
 
 } ?>
