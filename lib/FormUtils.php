@@ -35,5 +35,16 @@ class FormUtils
         $checked = preg_match('/[a-Z]{2}[0-9]{4}/',$check);
         return $checked;
     }
+
+    public function Comparing($flightID, $table)
+    {
+        foreach ($table as $row)
+        {
+            if($row['FlightID'] == $flightID)
+            {
+                return TRUE;
+            }
+        }
+    }
 }
 ?>

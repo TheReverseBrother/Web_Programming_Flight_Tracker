@@ -3,6 +3,9 @@
 <?php if($locals['fail'] == 1){?>
     <p id="error">Incorrect Input Please Enter Valid Lettors/Numbers</p>
 <?php }?>
+<?php if($locals['fail'] == 3){?>
+    <p id="error">Flight Already Exists</p>
+<?php }?>
 <p> This Table shows all flights currently scheduled to fly over Ireland Today</p>
 <br>
 <table>
